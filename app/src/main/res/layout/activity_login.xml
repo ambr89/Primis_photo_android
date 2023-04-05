@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:primisphoto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.brav.primisphoto.Login"
+    android:paddingTop="@dimen/general_padding"
+    android:paddingLeft="@dimen/general_padding"
+    android:paddingRight="@dimen/general_padding">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            style="@style/TextBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"/>
+
+        <EditText
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            android:layout_marginBottom="@dimen/interline_big"/>
+
+        <TextView
+            style="@style/TextBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"/>
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="@dimen/interline_big"/>
+
+        <CheckBox
+            android:id="@+id/remember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/interline_biggest"
+            android:checked="true"
+            android:text="@string/save_credential"/>
+
+        <TextView
+            style="@style/TextBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/n_scheda"/>
+
+        <EditText
+            android:id="@+id/edt_n_scheda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"
+            android:hint="@string/n_scheda"
+            android:layout_marginBottom="@dimen/interline_big"/>
+        </LinearLayout>
+
+    <TextView
+        android:textColor="@color/btn_gray_disable"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="v."
+        android:id="@+id/txtVersione"/>
+
+    <com.brav.primisphoto.customClass.Footer
+        primisphoto:textBtn="@string/start"
+        primisphoto:onClickButton="onClickNext"
+        android:layout_marginBottom="@dimen/general_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

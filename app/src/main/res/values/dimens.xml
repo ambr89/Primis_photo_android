@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="general_padding">6dp</dimen>
+
+    <dimen name="interline">2dp</dimen>
+    <dimen name="interline_big">5dp</dimen>
+    <dimen name="interline_biggest">10dp</dimen>
+    <dimen name="radius">5dp</dimen>
+    <dimen name="margin_button">1px</dimen>
+
+    <dimen name="txt_font_size">20dp</dimen>
+    <dimen name="small_btn_font_size">15sp</dimen>
+    <dimen name="txt_title_font_size">22dp</dimen>
+
+    <dimen name="btn_height">45dp</dimen>
+    <dimen name="edt_height">45dp</dimen>
+
+    <dimen name="btn_height_topbar">30dp</dimen>
+</resources>

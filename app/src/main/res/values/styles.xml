@@ -1,0 +1,50 @@
+<resources>
+
+    <style name="EditText" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">@dimen/txt_font_size</item>
+        <item name="android:singleLine">true</item>
+        <!--<item name="android:inputType">textCapCharacters|textNoSuggestions</item>-->
+        <item name="android:minHeight">@dimen/edt_height</item>
+        <item name="android:popupBackground">@null</item>
+        <item name="android:background">@drawable/bg_text_area</item>
+    </style>
+
+    <style name="TextView" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/txt_font_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextBold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/txt_font_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Button" parent="@style/Widget.AppCompat.Button"><!--parent="android:style/Widget.Button"-->
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:shadowColor">@color/black_shadow</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">0.2</item>
+        <item name="android:textSize">@dimen/txt_font_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/btn_blue</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:height">@dimen/btn_height</item>
+    </style>
+
+    <style name="CheckBox" parent="@android:style/Widget.CompoundButton.CheckBox"> <!--parent="@android:style/Widget.CompoundButton.CheckBox"-->
+        <item name="android:textSize">@dimen/txt_font_size</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <!--<item name="android:minHeight">@dimen/btn_height</item>-->
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+</resources>

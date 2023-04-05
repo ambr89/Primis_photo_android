@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CtrlFooter">
+        <attr name="onClickButton" format="string"/>
+        <attr name="textBtn" format="string"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">PrimisPhoto</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="n_scheda">N° scheda</string>
+    <string name="save_credential">Ricorda i dati di accesso</string>
+    <string name="start">Inizia</string>
+    <string name="send">Invia</string>
+    <string name="enable">Abilita</string>
+    <string name="close">Chiudi</string>
+    <string name="send_gps">Invia con coordinate</string>
+    <string name="ok">OK</string>
+    <string name="num">n.</string>
+    <string name="hint_note">Inserisci qui le note</string>
+
+    <string name="title_login">Login</string>
+    <string name="title_loadfoto">Seleziona Foto</string>
+    <string name="title_image">Immagine selezionata</string>
+
+    <string name="loading_system">Inizializzazione sistema &#8230;</string>
+    <string name="loading_system_end">Fine Configurazione sistema &#8230;</string>
+
+    <string name="attenzione_campi_vuoti">I campi non possono essere vuoti</string>
+    <string name="attenzione_max_photo">Attenzione, hai superato in numero massimo di foto allegabili</string>
+    <string name="errore">Errore, la invitiamo a riprovare</string>
+
+    <string name="errore_gps_permission">Per poter inviare le coordinate GPS devi consentire all\'app di accedere alla posizione</string>
+    <string name="errore_gps_disable">Hai il GPS del dispositivo disabilitato</string>
+    <string name="errore_gps_non_trovato">La posizione non è ancora stata individuata, riprova fra poco!</string>
+    <string name="err_photo">Deve inserire al meno una foto!</string>
+
+    <string name="progress">Elaborazione in corso...</string>
+    <string name="progress_send">Invio in corso...</string>
+
+    <string name="select_picture">Select Picture</string>
+</resources>

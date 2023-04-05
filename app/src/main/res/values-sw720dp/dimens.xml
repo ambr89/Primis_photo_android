@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="txt_font_size">34dp</dimen>
+    <dimen name="small_btn_font_size">24sp</dimen>
+    <dimen name="txt_title_font_size">40dp</dimen>
+
+
+    <dimen name="btn_height">75dp</dimen>
+    <dimen name="edt_height">75dp</dimen>
+
+
+</resources>

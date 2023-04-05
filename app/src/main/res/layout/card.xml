@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.brav.primisphoto.customClass.SquareRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="@dimen/interline">
+    <RelativeLayout
+        android:id="@+id/bgview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_card">
+        <ImageView
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+    </RelativeLayout>
+    <CheckBox
+        android:id="@+id/selected"
+        android:theme="@style/WhiteCheck"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</com.brav.primisphoto.customClass.SquareRelativeLayout>

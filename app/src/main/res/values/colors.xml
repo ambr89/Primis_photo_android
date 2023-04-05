@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#12968D</color>
+    <color name="colorPrimaryDark">#0D6A63</color>
+    <color name="colorAccent">#0D6A63</color> <!-- #FF4081 -->
+    <color name="black_shadow">#0a0a0a</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="light_blu">#CAF4F1</color>
+    <color name="gray">#D0D7D7</color>
+    <color name="candidate_other">#ff808080</color>
+    <color name="white_disable">#eeeeee</color>
+
+    <color name="blue_btn">@color/colorPrimary</color>
+    <color name="btn_gray_disable">#d0d0d0</color>
+    <color name="blue_scuro">@color/colorPrimaryDark</color>
+
+
+</resources>

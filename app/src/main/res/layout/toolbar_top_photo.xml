@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title_customTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_title_font_size"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/n_scheda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_btn_font_size"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_marginStart="@dimen/interline_biggest"
+                android:layout_marginLeft="@dimen/interline_biggest"
+                android:id="@+id/num_foto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_btn_font_size"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/btn_height_topbar"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/removePhoto"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/trash_can"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:onClick="onClickTopBar"
+            />
+
+        <ImageView
+            android:id="@+id/makePhoto"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/camera"
+            android:scaleType="fitCenter"
+            android:onClick="onClickTopBar"
+            android:background="#00000000"
+            />
+
+        <ImageView
+            android:id="@+id/openGallery"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/clip"
+            android:scaleType="fitCenter"
+            android:onClick="onClickTopBar"
+            />
+    </LinearLayout>
+
+</LinearLayout>

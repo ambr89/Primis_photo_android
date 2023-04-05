@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:primisphoto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.brav.primisphoto.Photo"
+    android:paddingTop="@dimen/general_padding"
+    android:paddingLeft="@dimen/general_padding"
+    android:paddingRight="@dimen/general_padding">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="@dimen/interline">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/note"
+        android:hint="@string/hint_note"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="@dimen/interline"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:maxLength="150"
+        android:padding="@dimen/general_padding"/>
+
+
+    <Button
+        android:id="@+id/btnProsegui"
+        android:drawableLeft="@android:drawable/ic_menu_mylocation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/interline"
+        android:gravity="center"
+        android:onClick="onClickSendGPS"
+        android:text="@string/send_gps"
+        tools:ignore="RtlHardcoded"/>
+
+
+    <com.brav.primisphoto.customClass.Footer
+        primisphoto:textBtn="@string/send"
+        primisphoto:onClickButton="onClickSend"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/general_padding"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
