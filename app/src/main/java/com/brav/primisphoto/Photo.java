@@ -20,8 +20,9 @@ import android.os.Handler;
 import android.provider.MediaStore;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.appcompat.widget.GridLayoutManager;
-import androidx.appcompat.widget.RecyclerView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.InputFilter;
 import android.text.TextUtils;
 import android.util.Log;
@@ -522,8 +523,8 @@ public class Photo extends MyBaseActivity implements DialogInterface.OnClickList
         myDataset = new ArrayList<>();
         externalUri = new ArrayList<>();
 
-        ((TextView) findViewById(R.id.n_scheda)).setText(n_scheda.toUpperCase());
-        num_foto = findViewById(R.id.num_foto);
+        ((TextView) getSupportActionBar().getCustomView().findViewById(R.id.n_scheda)).setText(n_scheda.toUpperCase());
+        num_foto = getSupportActionBar().getCustomView().findViewById(R.id.num_foto);
         setNum_foto(0);
 
 

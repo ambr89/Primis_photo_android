@@ -16,10 +16,5 @@
         android:scaleType="fitCenter"
         android:layout_height="0dp"/>
 
-  <!--  <com.brav.primisphoto.customClass.Footer
-        primisphoto:textBtn="@string/send"
-        primisphoto:onClickButton="onClickSend"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/> -->
 
 </LinearLayout>
