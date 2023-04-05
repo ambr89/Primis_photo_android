@@ -8,17 +8,15 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.brav.primisphoto.services.IWsdl2CodeEvents;
 import com.brav.primisphoto.services.Message;
 import com.brav.primisphoto.services.PrimisWS;
 import com.brav.primisphoto.util.Alerts;
@@ -28,7 +26,6 @@ import com.brav.primisphoto.util.Utility;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Objects;
 
 
 public class Login extends MyBaseActivity implements DialogInterface.OnClickListener{

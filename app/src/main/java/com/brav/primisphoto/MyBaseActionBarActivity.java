@@ -1,12 +1,9 @@
 package com.brav.primisphoto;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
-
-import com.brav.primisphoto.services.IWsdl2CodeEvents;
-import com.brav.primisphoto.util.Alerts;
 
 /**
  * Created by ambra on 25/10/2017.
