@@ -320,9 +320,9 @@ public class Photo extends MyBaseActivity implements DialogInterface.OnClickList
     private void openCamera() {
 
         if(Build.VERSION.SDK_INT >= 23) {
-            int permission2 = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            int permission2 = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
             if (permission2 != PackageManager.PERMISSION_GRANTED ) {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, CODE_CAMERA_PERMISSION);
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, CODE_CAMERA_PERMISSION);
                 return;
             }
         }
@@ -337,7 +337,7 @@ public class Photo extends MyBaseActivity implements DialogInterface.OnClickList
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, mPhotoUri);
                 startActivityForResult(intent, CAMERA_INTENT_CALLED);
             } else {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, CODE_CAMERA_PERMISSION);
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, CODE_CAMERA_PERMISSION);
             }
         } else {
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -558,6 +558,8 @@ public class Photo extends MyBaseActivity implements DialogInterface.OnClickList
 
 
         GPSManager2.getInstance(this);
+
+
 
     }
 
