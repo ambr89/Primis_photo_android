@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.ImageDecoder;
 import android.location.Location;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -222,18 +223,18 @@ public class Photo extends MyBaseActivity implements DialogInterface.OnClickList
         boolean canAdd = true;
 
         // su molti samsung abbiamo path diversi a seconda dell'applicazione che li legge
-        if (uri.toString().startsWith("content://com.google.android.apps.photos.content")){
-            int startIndex = uri.toString().indexOf("/content");
-            int endIndex = uri.toString().indexOf("/ORIGINAL");
-            if(endIndex == -1)
-                endIndex = uri.toString().indexOf("/REQUIRE_ORIGINAL");
-            if(endIndex == -1)
-                endIndex = uri.toString().indexOf("/LARGE");
-            if(endIndex!=-1) {
-                String str = uri.toString().substring(startIndex + 1, endIndex);
-                uri = Uri.parse(Uri.decode(str));
-            }
-        }
+//        if (uri.toString().startsWith("content://com.google.android.apps.photos.content")){
+//            int startIndex = uri.toString().indexOf("/content");
+//            int endIndex = uri.toString().indexOf("/ORIGINAL");
+//            if(endIndex == -1)
+//                endIndex = uri.toString().indexOf("/REQUIRE_ORIGINAL");
+//            if(endIndex == -1)
+//                endIndex = uri.toString().indexOf("/LARGE");
+//            if(endIndex!=-1) {
+//                String str = uri.toString().substring(startIndex + 1, endIndex);
+//                uri = Uri.parse(Uri.decode(str));
+//            }
+//        }
 
         for (Uri _uri : externalUri) {
             if (_uri == uri || _uri.getPath().equalsIgnoreCase(uri.getPath())) {
@@ -258,7 +259,14 @@ public class Photo extends MyBaseActivity implements DialogInterface.OnClickList
         Bitmap bitmapImage = null;
         Bitmap resized = null;
         try {
-            bitmapImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), _externalUri);
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
+                // This method was deprecated in API level 29. loading of images should be performed through ImageDecode
+                bitmapImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), _externalUri);
+            }else {
+                ImageDecoder.Source source = ImageDecoder.createSource(getContentResolver(), _externalUri);
+                bitmapImage = ImageDecoder.decodeBitmap(source);
+
+            }
             if(bitmapImage.getWidth() > 1000 && bitmapImage.getHeight() > 1000) {
                 int newWidth,newHeight;
                 if(bitmapImage.getWidth() > bitmapImage.getHeight())
