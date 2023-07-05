@@ -12,8 +12,8 @@
     <dimen name="small_btn_font_size">15sp</dimen>
     <dimen name="txt_title_font_size">22dp</dimen>
 
-    <dimen name="btn_height">45dp</dimen>
-    <dimen name="edt_height">45dp</dimen>
+    <dimen name="btn_height">48dp</dimen>
+    <dimen name="edt_height">48dp</dimen>
 
     <dimen name="btn_height_topbar">30dp</dimen>
 </resources>

@@ -282,6 +282,7 @@ public class Photo extends MyBaseActivity implements DialogInterface.OnClickList
             }
         }catch (Exception io){
             Log.v("exception", "ex " + io.getMessage());
+            return;
         }
 
 
