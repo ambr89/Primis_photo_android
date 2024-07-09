@@ -1,6 +1,6 @@
 package com.brav.primisphoto.util;
 
-public class snapshoConstants {
+public class Constants {
 
     //public static final String Url_primis_red = "https://demo.brav.it/Primis/PrimisWS.asmx";
     //public static final String Url_primis_green = "https://demo.brav.it/PrimisZiniElio/PrimisWS.asmx";
