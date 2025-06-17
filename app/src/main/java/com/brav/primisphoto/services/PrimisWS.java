@@ -27,7 +27,7 @@ import java.util.List;
 
 public class PrimisWS {
     
-    public String NAMESPACE ="http://primis.bravservices.it/";
+    public String NAMESPACE = "http://primis.bravservices.it/";
     public String url="";
     public int timeOut = 90000;
     public IWsdl2CodeEvents eventHandler;
@@ -92,16 +92,16 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","GetFile");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"GetFile");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("RelFileName",relFileName);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/GetFile", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"GetFile", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/GetFile", soapEnvelope);
+                httpTransport.call(NAMESPACE+"GetFile", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -162,16 +162,16 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","GetDocFileNames");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"GetDocFileNames");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("LastSyncDoc",lastSyncDoc);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/GetDocFileNames", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"GetDocFileNames", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/GetDocFileNames", soapEnvelope);
+                httpTransport.call(NAMESPACE+"GetDocFileNames", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -232,16 +232,16 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","GetSwFileNames");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"GetSwFileNames");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("LastSyncSw",lastSyncSw);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/GetSwFileNames", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"GetSwFileNames", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/GetSwFileNames", soapEnvelope);
+                httpTransport.call(NAMESPACE+"GetSwFileNames", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -302,7 +302,7 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","SavePics");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"SavePics");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("PicName",picName);
         soapReq.addProperty("PicType",picType);
@@ -312,9 +312,9 @@ public class PrimisWS {
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/SavePics", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"SavePics", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/SavePics", soapEnvelope);
+                httpTransport.call(NAMESPACE+"SavePics", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -380,16 +380,16 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","SaveLog");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"SaveLog");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("Log",log);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/SaveLog", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"SaveLog", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/SaveLog", soapEnvelope);
+                httpTransport.call(NAMESPACE+"SaveLog", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -455,15 +455,15 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","TestCom");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"TestCom");
         soapReq.addProperty("DeviceId",deviceId);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/TestCom", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"TestCom", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/TestCom", soapEnvelope);
+                httpTransport.call(NAMESPACE+"TestCom", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -529,7 +529,7 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","CercaScheda");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"CercaScheda");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("NumeroScheda",numeroScheda);
         soapReq.addProperty("SenderEmail",senderEmail);
@@ -537,9 +537,9 @@ public class PrimisWS {
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/CercaScheda", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"CercaScheda", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/CercaScheda", soapEnvelope);
+                httpTransport.call(NAMESPACE+"CercaScheda", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -605,7 +605,7 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","UploadAllegatoScheda");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"UploadAllegatoScheda");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("NumeroScheda",numeroScheda);
         soapReq.addProperty("SenderEmail",senderEmail);
@@ -615,9 +615,9 @@ public class PrimisWS {
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/UploadAllegatoScheda", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"UploadAllegatoScheda", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/UploadAllegatoScheda", soapEnvelope);
+                httpTransport.call(NAMESPACE+"UploadAllegatoScheda", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -683,15 +683,15 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","CheckSenderEmail");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"CheckSenderEmail");
         soapReq.addProperty("SenderEmail",senderEmail);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/CheckSenderEmail", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"CheckSenderEmail", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/CheckSenderEmail", soapEnvelope);
+                httpTransport.call(NAMESPACE+"CheckSenderEmail", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -750,6 +750,9 @@ public class PrimisWS {
         }.execute();
     }
     
+
+
+
     public Message GetSchedaByNumero(String numScheda,String username,String password){
         return GetSchedaByNumero(numScheda, username, password, null);
     }
@@ -758,7 +761,7 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","GetSchedaByNumero");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"GetSchedaByNumero");
         soapReq.addProperty("NumScheda",numScheda);
         soapReq.addProperty("Username",username);
         soapReq.addProperty("Password",password);
@@ -766,9 +769,9 @@ public class PrimisWS {
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/GetSchedaByNumero", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"GetSchedaByNumero", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/GetSchedaByNumero", soapEnvelope);
+                httpTransport.call(NAMESPACE+"GetSchedaByNumero", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -783,7 +786,7 @@ public class PrimisWS {
                     SoapObject j = (SoapObject)obj;
                     Message resultVariable =  new Message (j);
                     return resultVariable;
-                    
+
                 }
             }
         }catch (Exception e) {
@@ -793,7 +796,51 @@ public class PrimisWS {
         }
         return null;
     }
-    
+
+
+//    public Message GetSchedaByNumero(String numScheda,String username,String password,List<HeaderProperty> headers){
+//        SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+//        soapEnvelope.implicitTypes = true;
+//        soapEnvelope.dotNet = true;
+//        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","GetSchedaByNumero");
+//        soapReq.addProperty("NumScheda",numScheda);
+//        soapReq.addProperty("Username",username);
+//        soapReq.addProperty("Password",password);
+//        soapEnvelope.setOutputSoapObject(soapReq);
+//        HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
+//        try{
+//            if (headers!=null){
+//                httpTransport.call("http://primis.bravservices.it/GetSchedaByNumero", soapEnvelope,headers);
+//            }else{
+//                httpTransport.call("http://primis.bravservices.it/GetSchedaByNumero", soapEnvelope);
+//            }
+//            Object retObj = soapEnvelope.bodyIn;
+//            if (retObj instanceof SoapFault){
+//                SoapFault fault = (SoapFault)retObj;
+//                Exception ex = new Exception(fault.faultstring);
+//                if (eventHandler != null)
+//                    eventHandler.Wsdl2CodeFinishedWithException(ex);
+//            }else{
+//                SoapObject result=(SoapObject)retObj;
+//                if (result.getPropertyCount() > 0){
+//                    Object obj = result.getProperty(0);
+//                    SoapObject j = (SoapObject)obj;
+//                    Message resultVariable =  new Message (j);
+//                    return resultVariable;
+//
+//                }
+//            }
+//        }catch (Exception e) {
+//            if (eventHandler != null)
+//                eventHandler.Wsdl2CodeFinishedWithException(e);
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
+
+
+
+
     public void SaveFotoInoltrateServerAsync(InfoFotoInoltrate fotoInoltrate) throws Exception{
         if (this.eventHandler == null)
             throw new Exception("Async Methods Requires IWsdl2CodeEvents");
@@ -830,16 +877,16 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","SaveFotoInoltrateServer");
-        soapEnvelope.addMapping("http://primis.bravservices.it/","fotoInoltrate",new InfoFotoInoltrate().getClass());
+        SoapObject soapReq = new SoapObject(NAMESPACE,"SaveFotoInoltrateServer");
+        soapEnvelope.addMapping(NAMESPACE,"fotoInoltrate",new InfoFotoInoltrate().getClass());
         soapReq.addProperty("fotoInoltrate",fotoInoltrate);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/SaveFotoInoltrateServer", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"SaveFotoInoltrateServer", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/SaveFotoInoltrateServer", soapEnvelope);
+                httpTransport.call(NAMESPACE+"SaveFotoInoltrateServer", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -901,16 +948,16 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","SaveFotoInoltratePics");
-        soapEnvelope.addMapping("http://primis.bravservices.it/","fotoInoltrata",new FotoInoltrata().getClass());
+        SoapObject soapReq = new SoapObject(NAMESPACE,"SaveFotoInoltratePics");
+        soapEnvelope.addMapping(NAMESPACE,"fotoInoltrata",new FotoInoltrata().getClass());
         soapReq.addProperty("fotoInoltrata",fotoInoltrata);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/SaveFotoInoltratePics", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"SaveFotoInoltratePics", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/SaveFotoInoltratePics", soapEnvelope);
+                httpTransport.call(NAMESPACE+"SaveFotoInoltratePics", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -972,16 +1019,16 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","GetSchede_XML");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"GetSchede_XML");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("MatricolaOperatore",matricolaOperatore);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/GetSchede_XML", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"GetSchede_XML", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/GetSchede_XML", soapEnvelope);
+                httpTransport.call(NAMESPACE+"GetSchede_XML", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -1048,16 +1095,16 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","GetSchede");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"GetSchede");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("MatricolaOperatore",matricolaOperatore);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/GetSchede", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"GetSchede", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/GetSchede", soapEnvelope);
+                httpTransport.call(NAMESPACE+"GetSchede", soapEnvelope);
             }
         }catch (Exception e) {
             if (eventHandler != null)
@@ -1102,7 +1149,7 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","AperturaScheda");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"AperturaScheda");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("MatricolaOperatore",matricolaOperatore);
         soapReq.addProperty("DescrizioneOperatore",descrizioneOperatore);
@@ -1112,9 +1159,9 @@ public class PrimisWS {
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/AperturaScheda", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"AperturaScheda", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/AperturaScheda", soapEnvelope);
+                httpTransport.call(NAMESPACE+"AperturaScheda", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -1180,7 +1227,7 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","SaveSchede_XML");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"SaveSchede_XML");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("MatricolaOperatore",matricolaOperatore);
         soapReq.addProperty("xmlData",xmlData);
@@ -1188,9 +1235,9 @@ public class PrimisWS {
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/SaveSchede_XML", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"SaveSchede_XML", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/SaveSchede_XML", soapEnvelope);
+                httpTransport.call(NAMESPACE+"SaveSchede_XML", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -1256,16 +1303,16 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","SaveSchede");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"SaveSchede");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("MatricolaOperatore",matricolaOperatore);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/SaveSchede", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"SaveSchede", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/SaveSchede", soapEnvelope);
+                httpTransport.call(NAMESPACE+"SaveSchede", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -1331,7 +1378,7 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","SaveRecords_XML");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"SaveRecords_XML");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("xmlData",xmlData);
         soapReq.addProperty("tableName",tableName);
@@ -1339,9 +1386,9 @@ public class PrimisWS {
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/SaveRecords_XML", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"SaveRecords_XML", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/SaveRecords_XML", soapEnvelope);
+                httpTransport.call(NAMESPACE+"SaveRecords_XML", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -1407,15 +1454,15 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","SaveRecords");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"SaveRecords");
         soapReq.addProperty("DeviceId",deviceId);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/SaveRecords", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"SaveRecords", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/SaveRecords", soapEnvelope);
+                httpTransport.call(NAMESPACE+"SaveRecords", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -1481,15 +1528,15 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","SaveRecords2");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"SaveRecords2");
         soapReq.addProperty("DeviceId",deviceId);
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/SaveRecords2", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"SaveRecords2", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/SaveRecords2", soapEnvelope);
+                httpTransport.call(NAMESPACE+"SaveRecords2", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -1555,14 +1602,14 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","GetServerDateTime");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"GetServerDateTime");
         soapEnvelope.setOutputSoapObject(soapReq);
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/GetServerDateTime", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"GetServerDateTime", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/GetServerDateTime", soapEnvelope);
+                httpTransport.call(NAMESPACE+"GetServerDateTime", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){
@@ -1628,7 +1675,7 @@ public class PrimisWS {
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.implicitTypes = true;
         soapEnvelope.dotNet = true;
-        SoapObject soapReq = new SoapObject("http://primis.bravservices.it/","UpdateTables");
+        SoapObject soapReq = new SoapObject(NAMESPACE,"UpdateTables");
         soapReq.addProperty("DeviceId",deviceId);
         soapReq.addProperty("NomeTabelle",nomeTabelle);
         soapReq.addProperty("DateSync",dateSync);
@@ -1636,9 +1683,9 @@ public class PrimisWS {
         HttpTransportSE httpTransport = new HttpTransportSE(url,timeOut);
         try{
             if (headers!=null){
-                httpTransport.call("http://primis.bravservices.it/UpdateTables", soapEnvelope,headers);
+                httpTransport.call(NAMESPACE+"UpdateTables", soapEnvelope,headers);
             }else{
-                httpTransport.call("http://primis.bravservices.it/UpdateTables", soapEnvelope);
+                httpTransport.call(NAMESPACE+"UpdateTables", soapEnvelope);
             }
             Object retObj = soapEnvelope.bodyIn;
             if (retObj instanceof SoapFault){

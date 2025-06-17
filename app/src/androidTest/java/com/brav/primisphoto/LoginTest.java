@@ -88,7 +88,8 @@ public class LoginTest {
         onView(withId(R.id.edt_password)).perform(ViewActions.clearText());
         onView(withId(R.id.edt_username)).perform(ViewActions.typeText("testmichael"));
         onView(withId(R.id.edt_password)).perform(ViewActions.typeText("testmichael"));
-        onView(withId(R.id.edt_n_scheda)).perform(ViewActions.typeText("rxa.007"))
+        //onView(withId(R.id.edt_n_scheda)).perform(ViewActions.typeText("rxa.007"))
+        onView(withId(R.id.edt_n_scheda)).perform(ViewActions.typeText("AAQ.769"))
                 .perform(ViewActions.closeSoftKeyboard());
         //onView(withId(R.id.remember)).perform(scrollTo(), setChecked(true));
 
@@ -108,7 +109,8 @@ public class LoginTest {
         onView(withId(R.id.edt_password)).perform(ViewActions.clearText());
         onView(withId(R.id.edt_username)).perform(ViewActions.typeText("testmichael"));
         onView(withId(R.id.edt_password)).perform(ViewActions.typeText("testmichael"));
-        onView(withId(R.id.edt_n_scheda)).perform(ViewActions.typeText("rxa.007"))
+        //onView(withId(R.id.edt_n_scheda)).perform(ViewActions.typeText("rxa.007"))
+        onView(withId(R.id.edt_n_scheda)).perform(ViewActions.typeText("AAQ.769"))
                 .perform(ViewActions.closeSoftKeyboard());
 
         onView(withId(R.id.btnProsegui)).check(matches(isDisplayed()))
@@ -144,7 +146,8 @@ public class LoginTest {
         onView(withId(R.id.edt_password)).perform(ViewActions.clearText());
         onView(withId(R.id.edt_username)).perform(ViewActions.typeText("testmichael"));
         onView(withId(R.id.edt_password)).perform(ViewActions.typeText("testmichael"));
-        onView(withId(R.id.edt_n_scheda)).perform(ViewActions.typeText("rxa.007"))
+        //onView(withId(R.id.edt_n_scheda)).perform(ViewActions.typeText("rxa.007"))
+        onView(withId(R.id.edt_n_scheda)).perform(ViewActions.typeText("AAQ.769"))
                 .perform(ViewActions.closeSoftKeyboard());
         //onView(withId(R.id.remember)).perform(scrollTo(), setChecked(true));
 

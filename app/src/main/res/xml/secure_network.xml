@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">primis.zinielio.it</domain>
+    </domain-config>
+<!--    La "base-config" mi serve per le telecamera che hanno un IP dinamico non noto a priori-->
+    <base-config cleartextTrafficPermitted="true">
+    </base-config>
+</network-security-config>

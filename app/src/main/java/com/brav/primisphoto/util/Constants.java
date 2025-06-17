@@ -5,9 +5,21 @@ public class Constants {
     //public static final String Url_primis_red = "https://demo.brav.it/Primis/PrimisWS.asmx";
     //public static final String Url_primis_green = "https://demo.brav.it/PrimisZiniElio/PrimisWS.asmx";
 
-    public static final String Url_primis_red = "https://www.bravservices.it/IMOLA/Primis/primisws.asmx";
-    public static final String Url_primis_green = "https://www.bravservices.it/Zinielio/Primis/primisws.asmx";
+    //public static final String Url_primis_red = "https://www.bravservices.it/IMOLA/Primis/primisws.asmx";
+    public static final String Url_primis_red = "https://primis.zinielio.it/primisws.asmx";
+    public static final String Url_primis_green = "https://primis.zinielio.it/primisws.asmx"; //"https://www.bravservices.it/Zinielio/Primis/primisws.asmx";
 
+    // AMBIENTE TEST FERTEC
+//    public static final String Url_primis_red = "https://as-primis-web-test.azurewebsites.net/primisws.asmx";
+//    public static final String Url_primis_green = "https://as-primis-web-test.azurewebsites.net/primisws.asmx";
+
+    //Michael
+//    public static final String Url_primis_red = "http://192.168.2.79/PrimisZinielio/PrimisWs.asmx";
+//    public static final String Url_primis_green = "http://192.168.2.79/PrimisZinielio/PrimisWs.asmx";
+
+    // AMBIENTE TEST FERTEC
+//    public static final String Url_primis_red = "http://windev.fertec.it/primis/primisws.asmx";
+//    public static final String Url_primis_green = "http://windev.fertec.it/primis/primisws.asmx";
 
     public static PrimisType primisType = PrimisType.Red;
 

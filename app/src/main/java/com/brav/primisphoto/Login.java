@@ -23,6 +23,7 @@ import com.brav.primisphoto.util.Alerts;
 import com.brav.primisphoto.util.Constants;
 import com.brav.primisphoto.util.PrimisType;
 import com.brav.primisphoto.util.Utility;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ import java.util.ArrayList;
 public class Login extends MyBaseActivity implements DialogInterface.OnClickListener{
 
     private EditText username;
-    private EditText password;
+    private TextInputEditText password;
     private EditText n_scheda;
     private ProgressDialog dialog;
     private CheckBox remember;
@@ -60,6 +61,13 @@ public class Login extends MyBaseActivity implements DialogInterface.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         setTitle(getString(R.string.title_login));
+//
+//        FirebaseRemoteConfig mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
+//        FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()
+//                .setMinimumFetchIntervalInSeconds(3600)
+//                .build();
+//        mFirebaseRemoteConfig.setConfigSettingsAsync(configSettings);
+//        mFirebaseRemoteConfig.setDefaultsAsync(R.xml.remote_config_defaults);
 
         ws = new PrimisWS(this);
         //ws.setUrl(Constants.Url);
